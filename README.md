@@ -7,6 +7,7 @@
 > http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html
 
 In oracle page, you have to download the required version as per your need - 
+
 Client-server version interoperability is detailed in Doc ID 207303.1. For example, Oracle Call Interface 21 can connect to Oracle Database 12.1 or later, while Oracle Call Interface 19.3 can connect to Oracle Database 11.2 or later. Some tools may have other restrictions.
 
 Download files:
@@ -113,8 +114,9 @@ You should add "extension=oci8.so" to php.ini
 
 Load OCI8 into PHP
 
-```
-	sudo echo "extension=oci8.so" >> /etc/php/7.4/cli/php.ini
+```	
+	sudo su - 
+	echo "extension=oci8.so" >> /etc/php/7.4/cli/php.ini
 ```
 
 Restart Apache
