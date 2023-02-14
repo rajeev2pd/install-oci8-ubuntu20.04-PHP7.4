@@ -1,12 +1,13 @@
 # Install oci8 on Ubuntu 20.04 with PHP 7.4
 
-# Install OCI8 on Ubuntu 20.04 with PHP 7.4
-
 ## Step 1
 
 ### Download **Oracle Instant Client** and **SDK** from Oracle:
 
 > http://www.oracle.com/technetwork/topics/linuxx86-64soft-092277.html
+
+In oracle page, you have to download the required version as per your need - 
+Client-server version interoperability is detailed in Doc ID 207303.1. For example, Oracle Call Interface 21 can connect to Oracle Database 12.1 or later, while Oracle Call Interface 19.3 can connect to Oracle Database 11.2 or later. Some tools may have other restrictions.
 
 Download files:
 
@@ -56,7 +57,8 @@ Create symbolic link to the new Instant Client files:
 Edit/Create this file with the path to the lib (for LDCONFIG):
 
 ```
-	sudo echo /usr/lib/oracle/21.1/client64/lib > /etc/ld.so.conf.d/oracle.conf
+	sudo su -    
+    	echo /usr/lib/oracle/19.9/client64/lib > /etc/ld.so.conf.d/oracle.conf
 ```
 
 ## Step 6
@@ -64,6 +66,7 @@ Edit/Create this file with the path to the lib (for LDCONFIG):
 Update Dynamic Linker
 
 ```
+	step 6 also need super user login
 	ldconfig
 ```
 
@@ -176,6 +179,6 @@ oci8.statement_cache_size => 20 => 20
 
 ## Credits
 
-Based on a post from Carlos Juan
-
+Based on help of below url - 
 > https://www.cjorellana.net/2020/12/como-instalar-oci8-en-ubuntu-2004-y-php.html
+> https://gist.github.com/eSkiSo/781269c79b4dd740e90fcc059c1985ae
