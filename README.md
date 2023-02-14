@@ -10,6 +10,8 @@ In oracle page, you have to download the required version as per your need -
 
 Client-server version interoperability is detailed in Doc ID 207303.1. For example, Oracle Call Interface 21 can connect to Oracle Database 12.1 or later, while Oracle Call Interface 19.3 can connect to Oracle Database 11.2 or later. Some tools may have other restrictions.
 
+Version 21.0.0.0 using as example, you have to select your proper instantclient version as per your oracle database version
+
 Download files:
 
 > Basic Package (ZIP): instantclient-basic-linux.x64-21.1.0.0.0.zip
